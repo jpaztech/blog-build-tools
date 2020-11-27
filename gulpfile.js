@@ -300,7 +300,7 @@ const commentToGithub = async (done) => {
     repo: repoName,
     issue_number: issueNumber,
     // add slash to end of url.
-    body: `🎉🐧Thank you for your contribute!\n We have launched [preview environment!](${previewUrl}/)`,
+    body: `🎉🐧Thank you for your contribution!\n We have launched [preview environment!](${previewUrl}/)`,
   });
   if (result.status != 201) {
     logger.error("failed creating comment");
