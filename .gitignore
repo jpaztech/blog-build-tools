@@ -1,3 +1,10 @@
+.DS_Store
+Thumbs.db
+db.json
+public/
+.deploy*/
+source/_posts/
+
 # Logs
 logs
 *.log
