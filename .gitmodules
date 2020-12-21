@@ -1,0 +1,3 @@
+[submodule "example/themes/jpazure"]
+	path = example/themes/jpazure
+	url = https://github.com/jpazureid/hexo-theme-jpazure.git
