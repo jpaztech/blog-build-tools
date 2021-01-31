@@ -9,7 +9,7 @@ In this _Getting Started_, you need `git`, `docker` and `docker-compose`.
 ### Git
 
 * Windows: Download & install [git](https://git-scm.com/download/win).
-* Mac: Install it with Homebrew, MacPorts or installer.
+* Mac: Install it with [Homebrew](https://brew.sh/), [MacPorts](http://www.macports.org/) or [installer](http://sourceforge.net/projects/git-osx-installer/).
 * Linux (Ubuntu): `sudo apt-get install git-core`
 
 ### Docker
@@ -47,6 +47,8 @@ $ git init
 ```
 
 ### Setup blog theme
+
+[jpazureid/hexo-theme-jpazure](https://github.com/jpazureid/hexo-theme-jpazure)
 
 ```shell
 # First, cleanup themes directry
