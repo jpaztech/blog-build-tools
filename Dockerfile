@@ -1,4 +1,4 @@
-FROM node:14.14-slim
+FROM node:14.15-buster-slim
 
 RUN apt update \
   && apt install -y git ssh tar gzip ca-certificates
