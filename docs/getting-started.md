@@ -2,7 +2,7 @@
 
 This guide covers getting started with the `blog-build-tools`.
 
-## Installation 
+## Installation
 
 In this _Getting Started_, you need `git`, `docker` and `docker-compose`.
 
@@ -48,13 +48,16 @@ $ git init
 
 ### Setup blog theme
 
-[jpazureid/hexo-theme-jpazure](https://github.com/jpazureid/hexo-theme-jpazure)
+
+First, cleanup themes directry.
 
 ```shell
-# First, cleanup themes directry
 $ rm -rf themes/*
+```
 
-# Add jpazure blog theme as git submodule
+Add [jpazureid/hexo-theme-jpazure](https://github.com/jpazureid/hexo-theme-jpazure) blog theme as git submodule
+
+```shell
 $ git submodule add https://github.com/jpazureid/hexo-theme-jpazure.git themes/jpazure
 ```
 
@@ -86,3 +89,38 @@ Stopping example_blog_1 ... done
 $ docker-compose down
 ```
 
+## Publish Blog with GitHub Pages
+
+In this tutorial, we use [GitHub Actions](https://docs.github.com/en/actions) to deploy [GitHub Pages](https://pages.github.com/).
+
+### Commit changes
+
+```shell
+$ git add .
+$ git commit -m 'initial commit'
+```
+
+### Push to remote repository
+
+[Create a GitHub repository](https://github.com/new) named `{ORG_NAME}/blog`.
+
+[Add new remote](https://docs.github.com/en/github/using-git/adding-a-remote) and [Push commits](https://docs.github.com/en/github/using-git/pushing-commits-to-a-remote-repository).
+
+```shell
+$ git remote add origin https://github.com/${ORG_NAME}/blog.git
+$ git push origin master
+```
+
+The repository has a workflow definition for GitHub Actions ([`.github/workflows/pages.yml`](../example/.github/workflows/pages.yml)).
+
+When new changes is pushed to `master` branch, the workflow triggered.
+The jobs automatically builds blog page and uploads generated files to `gh-pages` branch.
+
+You can check workflow runs at `Actions` section.
+`https://github.com/{ORG_NAME}/blog/actions`
+
+### Configure GitHub Pages
+
+Once the workflow is finished, the generated pages can be found in the `gh-pages` branch of the repository.
+
+To publish the page with GitHub Pages, navigate to `GitHub Pages` section in repository `Settings` and change Source to `gh-pages` branch.
