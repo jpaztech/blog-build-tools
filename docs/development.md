@@ -8,9 +8,7 @@ If you don't have a membership of the repo, please fork the repository and creat
 
 ### 2. Create new Release
 
-To build a new container image, create new [Release](https://github.com/jpaztech/blog-build-tools/releases).
-
-When new release is created, the automated job builds new image and uploads to [GHCR](https://github.com/orgs/jpaztech/packages/container/package/blog-build-tools).
+To build a new container image, create new [Release](https://github.com/jpaztech/blog-build-tools/releases). When new release is created, the automated job builds new image and uploads to [GHCR](https://github.com/orgs/jpaztech/packages/container/package/blog-build-tools).
 
 https://github.com/jpaztech/blog-build-tools/blob/main/.github/workflows/release-build-tools.yml
 
@@ -27,8 +25,7 @@ Successfully built e25a0e41bfa3
 Successfully tagged blog-build-tools:test
 ```
 
-By default, [`docker-compose.yaml`](../example/docker-compose.yaml) to a GHCR image.
-Modify to a local image and run `docker-compose`.
+By default, [`docker-compose.yaml`](../example/docker-compose.yaml) refer to a GHCR image. Modify to a local image and run `docker-compose`.
 
 ```diff
  version: '3'
