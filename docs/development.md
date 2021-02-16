@@ -6,7 +6,7 @@
 
 If you don't have a membership of the repo, please fork the repository and create a Pull Request.
 
-#### 2. Create new Release
+### 2. Create new Release
 
 To build a new container image, create new [Release](https://github.com/jpaztech/blog-build-tools/releases).
 
