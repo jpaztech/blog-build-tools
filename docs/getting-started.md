@@ -98,6 +98,7 @@ In this tutorial, we use [GitHub Actions](https://docs.github.com/en/actions) to
 ```shell
 $ git add .
 $ git commit -m 'initial commit'
+$ git branch -M main
 ```
 
 ### Push to remote repository
@@ -108,12 +109,12 @@ $ git commit -m 'initial commit'
 
 ```shell
 $ git remote add origin https://github.com/${ORG_NAME}/blog.git
-$ git push origin master
+$ git push -u origin main
 ```
 
 The repository has a workflow definition for GitHub Actions ([`.github/workflows/pages.yml`](../example/.github/workflows/pages.yml)).
 
-When new changes is pushed to `master` branch, the workflow triggered.
+When new changes is pushed to `main` branch, the workflow triggered.
 The jobs automatically builds blog page and uploads generated files to `gh-pages` branch.
 
 You can check workflow runs at `Actions` section.
