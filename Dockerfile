@@ -1,7 +1,6 @@
 FROM node:14.15-buster-slim
 
-RUN apt update \
-  && apt install -y git ssh tar gzip ca-certificates
+RUN apt update && apt install -y curl git ssh tar gzip ca-certificates
 
 RUN mkdir /blog
 WORKDIR /blog
